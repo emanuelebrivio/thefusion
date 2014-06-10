@@ -1,7 +1,5 @@
 ![the fusion](https://raw.githubusercontent.com/emanuelebrivio/thefusion/master/static/img/fusion-resources.png)
 
-### TheFusion :: We will Match you ###
-
 ---
 
 **Technologies**

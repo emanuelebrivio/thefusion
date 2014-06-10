@@ -1,0 +1,25 @@
+extends layout
+
+block title
+  | TheFusion :: Benvenuto
+
+//-block links
+
+block header
+
+block app
+  #login
+    img.logo(src='/static/img/fusion-logo.png')
+    .spacer
+    img.claim(src='/static/img/fusion-claim.png')
+    .spacer-40
+    form.pure-form(action='index.html')
+      label(for='nightID') Night ID
+      input#nightID(type='text', name='nightID', placeholder='Inserisci l\'ID della serata')
+      button.pure-button
+        span Entra
+        i.icon-infinity
+
+block footer
+
+//-block scripts

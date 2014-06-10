@@ -1,0 +1,30 @@
+extends layout
+
+block title
+  | TheFusion :: Partecipanti
+
+//-block links
+
+block app
+  section#app
+    .inner
+      .pull-right
+        .spacer-20
+        small
+          a.link(href='/')
+            i.icon-arrows-ccw
+            span Aggiorna la lista
+      h3 Lista partecipanti attivi
+      //- Se non ci sono partecipanti mostrare la p#empty-list
+      //-p#empty-list
+        small Non sono ancora stati dati voti. Per aggiungerne uno, clicca sul bottone 
+        strong: i.icon-heart
+      ul.user-list
+        li: a(href='/profile.html') 1
+        li: a(href='/profile.html') 2
+        li: a(href='/profile.html') 13
+        li: a(href='/profile.html') 15
+        li: a(href='/profile.html') 26
+
+
+//-block scripts

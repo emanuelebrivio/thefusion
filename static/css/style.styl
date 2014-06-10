@@ -1,0 +1,281 @@
+@import ('nib')
+@import url('//fonts.googleapis.com/css?family=Fira+Sans:300,400,500|Damion')
+
+/* @CUSTOM colors for easy use */
+_dark = #673799
+_accent = #FE0088
+_white = #FFF
+/* end @CUSTOM */
+
+.fira-sans
+  font-family 'Fira Sans', sans-serif
+.damion
+  font-family 'Damion', serif
+  font-weight 400 !important
+
+.accent
+  color _accent
+
+.pure-g [class *='pure-u'],
+.pure-g-r [class*="pure-u"]
+  @extends .fira-sans
+
+html,
+body
+  width 100%
+  height 100%
+  background url('../img/fusion-background.jpg') no-repeat center center _dark
+  background-size cover
+  color _white
+  font-weight 300
+  overflow hidden
+  @extends .fira-sans
+
+.pure-form
+  input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='search'], input[type='tel'], input[type='color'], select, textarea
+    @extends .fira-sans
+    border 2px solid _white
+    border-radius 50px
+    box-shadow none
+    font-weight 300
+    font-size 15px
+    padding 11px 20px 10px 20px
+  button
+    @extends .fira-sans
+  label
+    text-transform uppercase
+    font-size 13px
+    display block
+
+.pure-button
+  font-size 15px
+  font-weight 500
+  text-transform uppercase
+  letter-spacing 1px
+  background none
+  border 2px solid _white
+  border-radius 50px
+  color _white
+  box-shadow none
+  padding 11px 20px 10px 20px
+  span,
+  i
+    display inline-block
+    vertical-align middle
+  &:hover
+    background none
+  &:active
+    border-color _accent
+    color _accent
+    background none
+
+/* @CUSTOM CSS for fast start */
+.container
+  width 960px
+  margin auto
+
+.page
+  width 100%
+  height auto
+
+a
+  text-decoration none
+
+h1, h2, h3
+  font-weight 300
+h4, h5, h6
+  font-weight 500
+  text-transform uppercase
+
+
+.spacer-5
+  height 5px
+.spacer-10
+  height 10px
+.spacer-20
+  height 20px
+.spacer-40
+  height 40px
+.spacer-60
+  height 60px
+.spacer-80
+  height 80px
+.spacer-100
+  height 100px
+
+.text-left
+  text-align left
+.text-center
+  text-align center
+.text-right
+  text-align right
+
+a.link
+  text-decoration none
+  color _white
+  box-shadow inset 0 -2px 0 rgba(_white, 0.2)
+  transition color 0.3s ease, box-shadow 0.3s ease
+  display inline-block
+  &:hover
+    color _accent
+    box-shadow inset 0 -2px 0 rgba(_accent, 0.3)
+/* end @CUSTOM */
+
+
+.logo
+  display inline-block
+  vertical-align middle
+  width 200px
+  height auto
+.claim
+  display inline-block
+  vertical-align middle
+  width 220px
+  height auto
+
+#login
+  width 600px
+  height 300px
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  text-align center
+  input,
+  button
+    display inline-block
+    vertical-align middle
+  button
+    margin-left 20px
+  input
+    width 260px
+  label
+    margin-right 135px
+
+header
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 65px
+  overflow hidden
+  .inner
+    padding 20px
+    .logo
+      width 100px
+    .claim
+      width 110px
+    .pull-right
+      float right
+
+section#app
+  height unquote('calc(100% - 65px)')
+  margin-top 65px
+  overflow auto
+  -webkit-overflow-scrolling touch
+  .inner
+    padding 20px
+    .pull-right
+      float right
+
+footer
+  position fixed
+  bottom 15px
+  left 50%
+  width 60px
+  height 60px
+  transform translate(-50%, 0)
+  .pure-button
+    display block
+    margin 0
+    width 56px
+    height 56px
+    line-height 56px
+    text-align center
+    padding 0
+    background rgba(#4f2a73, 0.5)
+    box-shadow 0 0 10px 2px #4f2a73, inset 0 0 10px 2px #4f2a73
+    span
+      text-shadow 0 0 10px #4f2a73
+    &:hover,
+    &:active
+      background rgba(#4f2a73, 0.5)
+
+.mask-modal
+  background rgba(#4f2a73, 0.9)
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
+  display none
+  .modal
+    width 600px
+    position fixed
+    z-index 2
+    top 80px
+    left 50%
+    transform translate(-50%, 0)
+
+#vote-modal
+  .modal
+    text-align center
+    input,
+    label,
+    button
+      display inline-block
+      vertical-align middle
+      margin 0 5px
+    input
+      width 100px
+    .pure-button
+      margin-left 20px
+
+.user-list
+  list-style none
+  margin 0 -10px
+  padding 0
+  li
+    display inline-block
+    width 56px
+    height 56px
+    margin 10px
+    a
+      display block
+      width 56px
+      height 56px
+      background _accent
+      border-radius 30px
+      color _white
+      font-weight 300
+      text-align center
+      line-height 60px
+      font-size 24px
+      &:active
+        background _dark !important
+
+.others
+  .user-list
+    li
+      width 40px
+      height 40px
+      a
+        width 40px
+        height 40px
+        line-height 44px
+        font-size 15px
+        font-weight 400
+  .others-match
+    .user-list
+      li
+        a
+          background-color #12b663
+  .others-like
+    .user-list
+      li
+        a
+          background-color #1ba2ef
+          
+
+@import ('font')
+
